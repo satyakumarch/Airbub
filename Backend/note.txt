@@ -1,0 +1,1 @@
+MongoDB_URL="mongodb+srv://satyakumarchaudhary603_db_user:satyakumar123@cluster0.xcwlhuq.mongodb.net/Airbnb-clone"
