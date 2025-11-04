@@ -4,6 +4,22 @@ import { FiSearch } from "react-icons/fi";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { CgProfile } from "react-icons/cg";
 import { MdWhatshot } from "react-icons/md";
+import { GiFamilyHouse } from "react-icons/gi";
+import { MdBedroomParent } from "react-icons/md";
+import { MdOutlinePool } from "react-icons/md";
+import { GiWoodCabin } from "react-icons/gi";
+import { SiHomeassistantcommunitystore } from "react-icons/si";
+import { IoBedOutline } from "react-icons/io5";
+import { FaTreeCity } from "react-icons/fa6";
+import { BiBuildingHouse } from "react-icons/bi";
+
+
+
+
+
+
+
+
 
 
 
@@ -29,12 +45,54 @@ function Nav() {
 
         </div>
         {/* navbar */}
-        <div className='w-[100vw] h-[85px] bg-white'>
-            <div>
-                <MdWhatshot/>
-                <h3>Live Anywhere</h3>
+        <div className='w-[100vw] h-[85px] bg-white flex items-center justify-center cursor-pointer gap-[40px]'>
+           
+            <div className='flex items-center justify-center flex-col hover:border-b-[1px] border-[#a6a5a5] text-[13px]'>
+                <MdWhatshot className='w-[30px] h-[30px] text-black'/>
+                <h3>Trending</h3>
 
             </div>
+            <div className='flex items-center justify-center flex-col hover:border-b-[1px] border-[#a6a5a5] text-[13px]'>
+                <GiFamilyHouse className='w-[30px] h-[30px] text-black'/>
+                <h3>Villa</h3>
+
+            </div>
+            <div className='flex items-center justify-center flex-col hover:border-b-[1px] border-[#a6a5a5] text-[13px]'>
+                <FaTreeCity className='w-[30px] h-[30px] text-black'/>
+                <h3>Farm House</h3>
+
+            </div>
+            <div className='flex items-center justify-center flex-col hover:border-b-[1px] border-[#a6a5a5] text-[13px]'>
+                <MdOutlinePool className='w-[30px] h-[30px] text-black'/>
+                <h3>Pool House</h3>
+
+            </div>
+            <div className='flex items-center justify-center flex-col hover:border-b-[1px] border-[#a6a5a5] text-[13px]'>
+                <MdBedroomParent className='w-[30px] h-[30px] text-black'/>
+                <h3>Rooms</h3>
+
+            </div>
+            <div className='flex items-center justify-center flex-col hover:border-b-[1px] border-[#a6a5a5] text-[13px]'>
+                <BiBuildingHouse className='w-[30px] h-[30px] text-black'/>
+                <h3>Flat</h3>
+
+            </div>
+            <div className='flex items-center justify-center flex-col hover:border-b-[1px] border-[#a6a5a5] text-[13px]'>
+                <IoBedOutline className='w-[30px] h-[30px] text-black'/>
+                <h3>PG</h3>
+
+            </div>
+            <div className='flex items-center justify-center flex-col hover:border-b-[1px] border-[#a6a5a5] text-[13px]'>
+                <GiWoodCabin className='w-[30px] h-[30px] text-black'/>
+                <h3>Cabins</h3>
+
+            </div>
+            <div className='flex items-center justify-center flex-col hover:border-b-[1px] border-[#a6a5a5] text-[13px]'>
+                <SiHomeassistantcommunitystore className='w-[30px] h-[30px] text-black'/>
+                <h3>Shops</h3>
+
+            </div>
+            
 
         </div>
     </div>
