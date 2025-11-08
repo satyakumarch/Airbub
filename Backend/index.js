@@ -35,6 +35,7 @@ import cors from "cors";
 import connectDb from "./config/db.js";
 import authRouter from "./routes/auth.route.js";
 import cookieParser from "cookie-parser";
+import userRouter from "./routes/user.route.js";
 
 dotenv.config();
 
@@ -73,6 +74,7 @@ app.get("/", (req, res) => {
 
 // ✅ Routes
 app.use("/api/auth", authRouter);
+app.use("/api/user",userRouter);
 
 // ✅ Start server *after* DB connection
 const startServer = async () => {

@@ -5,11 +5,13 @@ import { FaArrowLeft } from "react-icons/fa6";
 import { useContext } from "react";
 import { AuthDataContext } from '../Context/AuthContext.jsx';
 import axios from "axios";
+import { userDataContext } from "../Context/UserContext.jsx";
 
 
 function Login() {
   let [showPassword, setShowPassword] = useState(false);
   let {serverUrl} = useContext(AuthDataContext);
+  let {userData,setUserData}=useContext(userDataContext);
   let [email, setEmail] = useState("");
   let [password, setPassword] = useState("");
 
@@ -23,6 +25,8 @@ function Login() {
         email,
         password
       }, { withCredentials: true });
+      setUserData(result.data);
+      navigate("/");
       console.log("Login successful", result);
     } catch (error) {
       console.log("Login failed", error);

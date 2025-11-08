@@ -5,10 +5,12 @@ import { FaArrowLeft } from "react-icons/fa6";
 import { AuthDataContext } from '../Context/AuthContext.jsx';
 import { useContext } from "react";
 import axios from "axios";
+import { userDataContext } from "../Context/UserContext.jsx";
 
 
 export default function AirbnbLoginForm() {
   const [showPassword, setShowPassword] = useState(false);
+  let { userData, setUserData } = useContext(userDataContext);
   let navigate = useNavigate();
   let { serverUrl } = useContext(AuthDataContext);
   let [name, setName] = useState("");
@@ -25,6 +27,8 @@ export default function AirbnbLoginForm() {
         email,
         password
       }, { withCredentials: true });
+      setUserData(result.data);
+      navigate("/");
       console.log("Signup successful", result);
     } catch (error) {
       console.log("Signup failed", error);
