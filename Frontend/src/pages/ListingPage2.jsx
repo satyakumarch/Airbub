@@ -11,7 +11,12 @@ import { ListingDataContext } from "../Context/ListingContext.jsx";
 
 function ListingPage2() {
   const navigate = useNavigate();
-  let [category,setCategory]=useContext(ListingDataContext);
+  // let [category,setCategory]=useContext(ListingDataContext);
+  //  const [category, setCategory] = useState("");
+  const { category, setcategory } = useContext(ListingDataContext);
+
+
+
   return (
     <div className="w-[100%] h-[100vh] bg-white flex items-center justify-center relative overflow-auto mt-[50px]">
       {/* Back button */}
@@ -32,38 +37,38 @@ function ListingPage2() {
         <div  className="max-w-[900px] w-[100%] h-[100%] flex flex-wrap items-center justify-center gap-[15px] md:w-[70%]" >
       
 
-        <div className={`w-[180px] h-[100px]  flex justify-center items-center flex-col cursor-pointer border-[2px] hover:border-[#a6a5a5] text-[16px] rounded-lg ${category=="villa" ? "border-3 border-[#8b8b8b]" :""}`} onClick={()=>setCategory("Villa")}>
+        <div className={`w-[180px] h-[100px]  flex justify-center items-center flex-col cursor-pointer border-[2px] hover:border-[#a6a5a5] text-[16px] rounded-lg ${category=="Villa" ? "border-[3px] border-[#8b8b8b]" :""}`} onClick={()=>setcategory("Villa")}>
 
           <GiFamilyHouse className="w-[30px] h-[30px] text-[black]"/>
           <h3>Villa</h3>
         </div>
-         <div className={`w-[180px] h-[100px]  flex justify-center items-center flex-col cursor-pointer border-[2px] hover:border-[#a6a5a5] text-[16px] rounded-lg ${category=="farm house" ? "border-3 border-[#8b8b8b]" :""}`} onClick={()=>setCategory("Farm House")}>
+         <div className={`w-[180px] h-[100px]  flex justify-center items-center flex-col cursor-pointer border-[2px] hover:border-[#a6a5a5] text-[16px] rounded-lg ${category=="Farm House" ? "border-[3px] border-[#8b8b8b]" :""}`} onClick={()=>setcategory("Farm House")}>
           <FaTreeCity className="w-[30px] h-[30px] text-[black]"/>
           <h3>Farm House</h3>
         </div>
-         <div className={`w-[180px] h-[100px]  flex justify-center items-center flex-col cursor-pointer border-[2px] hover:border-[#a6a5a5] text-[16px] rounded-lg ${category=="pool house" ? "border-3 border-[#8b8b8b]" :""}`} onClick={()=>setCategory("Pool House")}>
+         <div className={`w-[180px] h-[100px]  flex justify-center items-center flex-col cursor-pointer border-[2px] hover:border-[#a6a5a5] text-[16px] rounded-lg ${category=="Pool House" ? "border-[3px] border-[#8b8b8b]" :""}`} onClick={()=>setcategory("Pool House")}>
           <MdOutlinePool className="w-[30px] h-[30px] text-[black]"/>
           <h3>Pool House</h3>
         </div>
-         <div className={`w-[180px] h-[100px]  flex justify-center items-center flex-col cursor-pointer border-[2px] hover:border-[#a6a5a5] text-[16px] rounded-lg ${category=="room" ? "border-3 border-[#8b8b8b]" :""}`} onClick={()=>setCategory("Room")}>
+         <div className={`w-[180px] h-[100px]  flex justify-center items-center flex-col cursor-pointer border-[2px] hover:border-[#a6a5a5] text-[16px] rounded-lg ${category=="Room" ? "border-[3px] border-[#8b8b8b]" :""}`} onClick={()=>setcategory("Room")}>
           <MdBedroomParent className="w-[30px] h-[30px] text-[black]"/>
           <h3>Room</h3>
         </div>
-         <div className={`w-[180px] h-[100px]  flex justify-center items-center flex-col cursor-pointer border-[2px] hover:border-[#a6a5a5] text-[16px] rounded-lg ${category=="flat" ? "border-3 border-[#8b8b8b]" :""}`} onClick={()=>setCategory("Flat")}>
+         <div className={`w-[180px] h-[100px]  flex justify-center items-center flex-col cursor-pointer border-[2px] hover:border-[#a6a5a5] text-[16px] rounded-lg ${category=="Flat" ? "border-[3px] border-[#8b8b8b]" :""}`} onClick={()=>setcategory("Flat")}>
           <BiBuildingHouse className="w-[30px] h-[30px] text-[black]"/>
           <h3>Flat</h3>
         </div>
         
-         <div className={`w-[180px] h-[100px]  flex justify-center items-center flex-col cursor-pointer border-[2px] hover:border-[#a6a5a5] text-[16px] rounded-lg ${category=="pg" ? "border-3 border-[#8b8b8b]" :""}`} onClick={()=>setCategory("PG")}>
+         <div className={`w-[180px] h-[100px]  flex justify-center items-center flex-col cursor-pointer border-[2px] hover:border-[#a6a5a5] text-[16px] rounded-lg ${category=="PG" ? "border-[3px] border-[#8b8b8b]" :""}`} onClick={()=>setcategory("PG")}>
           <IoBedOutline className="w-[30px] h-[30px] text-[black]"/>
           <h3>PG</h3>
         </div>
         
-         <div className={`w-[180px] h-[100px]  flex justify-center items-center flex-col cursor-pointer border-[2px] hover:border-[#a6a5a5] text-[16px] rounded-lg ${category=="cabin" ? "border-3 border-[#8b8b8b]" :""}`} onClick={()=>setCategory("Cabin")}>
+         <div className={`w-[180px] h-[100px]  flex justify-center items-center flex-col cursor-pointer border-[2px] hover:border-[#a6a5a5] text-[16px] rounded-lg ${category=="Cabin" ? "border-[3px] border-[#8b8b8b]" :""}`} onClick={()=>setcategory("Cabin")}>
           <GiWoodCabin className="w-[30px] h-[30px] text-[black]"/>
           <h3>Cabin</h3>
         </div>
-         <div className={`w-[180px] h-[100px]  flex justify-center items-center flex-col cursor-pointer border-[2px] hover:border-[#a6a5a5] text-[16px] rounded-lg ${category=="shop" ? "border-3 border-[#8b8b8b]" :""}`} onClick={()=>setCategory("Shop")}>
+         <div className={`w-[180px] h-[100px]  flex justify-center items-center flex-col cursor-pointer border-[2px] hover:border-[#a6a5a5] text-[16px] rounded-lg ${category=="Shop" ? "border-[3px] border-[#8b8b8b]" :""}`} onClick={()=>setcategory("Shop")}>
           <SiHomeassistantcommunitystore
            className="w-[30px] h-[30px] text-[black]"/>
           <h3>Shops</h3>
@@ -72,7 +77,7 @@ function ListingPage2() {
         
         
     </div>
-    <button className="px-[50px] py-[10px] bg-[red] text-[white] text-[18px] md:px-[100px] rounded-lg absolute  bottom-[10%]">next</button>
+    <button className="px-[50px] py-[10px] bg-[red] text-[white] text-[18px] md:px-[100px] rounded-lg absolute  bottom-[10%]" onClick={()=>navigate("/listingpage3")} disabled={!category}>next</button>
 
     </div>
     </div>
