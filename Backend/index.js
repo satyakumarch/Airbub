@@ -36,6 +36,7 @@ import connectDb from "./config/db.js";
 import authRouter from "./routes/auth.route.js";
 import cookieParser from "cookie-parser";
 import userRouter from "./routes/user.route.js";
+import listingRouter from "./routes/listing.route.js";
 
 dotenv.config();
 
@@ -75,6 +76,8 @@ app.get("/", (req, res) => {
 // ✅ Routes
 app.use("/api/auth", authRouter);
 app.use("/api/user",userRouter);
+app.use("/api/listing",listingRouter);
+
 
 // ✅ Start server *after* DB connection
 const startServer = async () => {
