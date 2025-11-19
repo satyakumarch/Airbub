@@ -48,7 +48,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 // ✅ FIXED: Proper CORS configuration
-const allowedOrigin = "http://localhost:5173";
+const allowedOrigin = "http://localhost:5174";
 
 app.use(
   cors({
@@ -87,7 +87,7 @@ const startServer = async () => {
       console.log(`✅ Server started on http://localhost:${port}`);
     });
   } catch (error) {
-    console.error("❌ Database connection failed:", error);
+    console.error("Database connection failed:", error);
     process.exit(1);
   }
 };

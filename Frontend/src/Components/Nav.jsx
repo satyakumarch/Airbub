@@ -59,10 +59,13 @@ let { userData, setUserData } = useContext(userDataContext);
                     </button>
                   { showpopup && <div className='w-[220px] h-[250px] absolute bg-slate-50 top-[110%] right-[5%] border-[1px] border-[#aaa9a9] z-10 rounded-lg md:right-[10%] shadow-lg'>
                         <ul className='w-[100%] h-[100%] text-[17px] flex items-start justify-around flex-col py-[10px] '>
-                            <li className='w-[100%] px-[15px] py-[10px] hover:bg-[#f4f3f3] cursor-pointer' onClick={()=>navigate("/login") }>Login</li>
-                            <li className='w-[100%] px-[15px] py-[10px] hover:bg-[#f4f3f3] cursor-pointer' onClick={handleLogout}>Logout</li>
+                           {!userData && <li className='w-[100%] px-[15px] py-[10px] hover:bg-[#f4f3f3] cursor-pointer' onClick={()=>{navigate("/login");
+                                setShowpopup(false)}}>Login</li>}
+                           {userData && <li className='w-[100%] px-[15px] py-[10px] hover:bg-[#f4f3f3] cursor-pointer' onClick={()=>{handleLogout();
+                                setShowpopup(false)}}>Logout</li>}
                             <div  className='w-[100%] h-[2px] bg-[#c1C0c0]'></div>
-                            <li className='w-[100%] px-[15px] py-[10px] hover:bg-[#f4f3f3] cursor-pointer' onClick={()=>navigate("/listingpage1")}>List your Home</li>
+                            <li className='w-[100%] px-[15px] py-[10px] hover:bg-[#f4f3f3] cursor-pointer' onClick={()=>{navigate("/listingpage1");
+                                setShowpopup(false)}}>List your Home</li>
                             <li className='w-[100%] px-[15px] py-[10px] hover:bg-[#f4f3f3] cursor-pointer'>My Listing</li>
                             <li className='w-[100%] px-[15px] py-[10px] hover:bg-[#f4f3f3] cursor-pointer'>Check Booking</li>
 
