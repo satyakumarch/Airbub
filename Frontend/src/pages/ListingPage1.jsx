@@ -163,7 +163,7 @@ import React, { useContext } from "react";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
 import { ListingDataContext } from "../Context/ListingContext";
-import { Navigate } from "react-router-dom";
+import { Navigate }  from "react-router-dom";
 
 function ListingPage1() {
   let navigate = useNavigate();
@@ -243,7 +243,7 @@ function ListingPage1() {
           <textarea
             id="description"
             placeholder="Enter the description"
-            className="w-full h-[100px] border border-pink-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-400 transition duration-300 placeholder:text-gray-400 resize-none"  required onChange={(e)=>setdescription(e.target.value)} value={description}/>
+            className="w-full h-[100px] border border-pink-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-400 transition duration-300 placeholder:text-gray-400 resize-none"  required onChange={(e)=>setDescription(e.target.value)} value={description}/>
         </div>
 
         {/* Image 1 */}

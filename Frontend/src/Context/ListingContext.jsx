@@ -93,8 +93,8 @@ import axios from "axios";
 export const ListingDataContext = createContext();
 
 function ListingProvider({ children }) {
-  const [title, settitle] = useState("");
-  const [description, setdescription] = useState("");
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
   const [frontEndImage1, setFrontEndImage1] = useState(null);
   const [frontEndImage2, setFrontEndImage2] = useState(null);
   const [frontEndImage3, setFrontEndImage3] = useState(null);
@@ -131,8 +131,8 @@ function ListingProvider({ children }) {
   };
 
   const value = {
-    title,settitle,
-    description,setdescription,
+    title,setTitle,
+    description,setDescription,
     frontEndImage1,setFrontEndImage1,
     frontEndImage2,setFrontEndImage2,
     frontEndImage3,setFrontEndImage3,
